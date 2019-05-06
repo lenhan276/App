@@ -13,10 +13,14 @@ export default class Login extends Component {
     return (
      
       <ImageBackground source={background} style={styles.backgroundContainer}>
+      <View
+          style={styles.container}
+      >
           <Logo/>
-        <View style = {styles.container}>
-          <FormLogin/>
-        </View>   
+          <View style ={{marginBottom: hp('13%'),}}>
+            <FormLogin/>
+          </View>
+      </View>
       </ImageBackground>
     )
   }
@@ -36,20 +40,7 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        marginBottom: hp('22%'),
-      },
-      registTextCont: {
-        justifyContent: 'flex-end',
-        marginBottom: 50
-      },
-      RegistText: {
-        color: 'rgba(69, 8, 135, 0.5)',
-        fontSize: 16
-      },
-      registBtn: {
-        color: 'black',
-        fontSize: 16,
-        fontWeight: '500'
+        marginTop: hp('4.5%'),
       },
     });
   

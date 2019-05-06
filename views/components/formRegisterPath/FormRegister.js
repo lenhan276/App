@@ -149,19 +149,19 @@ export default class FormRegister extends Component {
                 backdropTransitionInTiming={1000}
                 backdropTransitionOutTiming={1000}>
 
-              <View style={styles.modalStyle2}>
-                <Text style = {styles.modalText }
-                      onPress={() => {
-                        this._toggleModal2(),
-                        this.backtoLogin()
-                    }}  
-                >
+              <TouchableOpacity style={styles.modalStyle2}
+                  onPress={() => {
+                    this._toggleModal2(),
+                    this.backtoLogin()
+                }}  >
+                <Text style = {styles.modalText }                >
                   Your registration has been successfully completed!
                 </Text>
+
                 <Text style ={{color: 'black', fontSize: 16}}>
                   Please login!
                 </Text>
-              </View>
+              </TouchableOpacity>
             </Modal>
       </KeyboardAvoidingView>
      
@@ -174,41 +174,46 @@ const styles = StyleSheet.create({
       flex: 1, 
       justifyContent: 'center',
       alignItems: 'center',
-      marginTop: hp('10%'),
+      marginTop: hp('8%'),
     },
     inputContainer: {
-      marginTop: 30
+      marginTop: hp('5%'),
     },
     inputContainerPass: {
-      marginTop: 10
+      marginTop: hp('1.5%'),
     },
     input: {
-      width: WIDTH - 55,
-      height: 50,
+      width: WIDTH - wp('13.5%'),
+      height: hp('6.5%'),
       borderRadius: 25,
-      fontSize: 16,
-      paddingLeft: 45,
+      fontSize: hp('2%'),
+      paddingLeft: wp('13%'),
       backgroundColor: 'rgba(0, 0, 0, 0.35)',
       color: 'rgba(255, 255, 255, 0.7)',
-      marginHorizontal: 25
+      marginHorizontal: wp('6%'),
     },
     inputIcon: {
       position: 'absolute',
-      top: 10,
-      left: 37
+      top: hp('1.2%'),
+      left: wp('10%'),
     },
     btnLogin: {
-      height: 50,
+      height: hp('7%'),
       borderRadius: 25,
       backgroundColor: 'rgba(69, 8, 135, 1)',
       justifyContent: 'center',
       marginTop: hp('3%'),
-      paddingHorizontal: 130,
+      paddingHorizontal: wp('32%'),
+      shadowColor: 'rgba(0,0,0, .4)', // IOS
+      shadowOffset: { height: 1, width: 1 }, // IOS
+      shadowOpacity: 1, // IOS
+      shadowRadius: 1, //IOS
+      elevation: 2, // Android
       // marginBottom: 50,
     },
     textBtnLogin: {
       color: 'rgba(255, 255, 255, 1)',
-      fontSize: 20,
+      fontSize: hp('2.5%'),
       textAlign: 'center'
     },
     modalStyle:{
@@ -225,10 +230,10 @@ const styles = StyleSheet.create({
       height: hp('13%'),
       // paddingHorizontal: 15,
     
-    },
+    },  
     modalStyle2:{
-      paddingVertical: 28,
-      paddingHorizontal: 15,
+      paddingVertical: wp('5%'),
+      paddingHorizontal: wp('5%'),
       backgroundColor: 'white',
       borderColor:'black',
       justifyContent: 'center',

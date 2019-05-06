@@ -77,38 +77,43 @@ const styles = StyleSheet.create({
         marginTop: hp('10%'),
     },
     inputContainer: {
-      marginTop: 30
+      marginTop: hp('5%'),
     },
     inputContainerPass: {
-      marginTop: 10
+      marginTop: hp('1.5%'),
     },
     input: {
-      width: WIDTH - 55,
-      height: 50,
+      width: WIDTH - wp('13.5%'),
+      height: hp('6.5%'),
       borderRadius: 25,
-      fontSize: 16,
-      paddingLeft: 45,
+      fontSize: hp('2%'),
+      paddingLeft: wp('13%'),
       backgroundColor: 'rgba(0, 0, 0, 0.35)',
       color: 'rgba(255, 255, 255, 0.7)',
-      marginHorizontal: 25
+      marginHorizontal: wp('6%'),
     },
     inputIcon: {
       position: 'absolute',
-      top: 10,
-      left: 37
+      top: hp('1.2%'),
+      left: wp('10%'),
     },
     btnLogin: {
-      height: 50,
+      height: hp('7%'),
       borderRadius: 25,
       backgroundColor: 'rgba(69, 8, 135, 1)',
       justifyContent: 'center',
       marginTop: hp('3%'),
-      paddingHorizontal: 148,
-      // marginBottom: 50
+      paddingHorizontal: wp('36%'),
+      shadowColor: 'rgba(0,0,0, .4)', // IOS
+      shadowOffset: { height: 1, width: 1 }, // IOS
+      shadowOpacity: 1, // IOS
+      shadowRadius: 1, //IOS
+      elevation: 2, // Android
+      // marginBottom: 50,
     },
     textBtnLogin: {
       color: 'rgba(255, 255, 255, 1)',
-      fontSize: 20,
+      fontSize: hp('2.5%'),
       textAlign: 'center'
     }
   });

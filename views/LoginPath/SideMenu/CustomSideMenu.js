@@ -48,7 +48,9 @@ export default class ContentDrawer extends Component {
  
         </TouchableOpacity>
         
-        <View style = {{marginTop: hp('40%')}}>
+        {/* <View style={{ width: '100%', height: 1, backgroundColor: '#e2e2e2', marginTop: hp('4%'),}} /> */}
+
+        <View style = {styles.logOutBox}>
           <TouchableOpacity style={styles.itemBox} onPress={() => { NavigationService.navigate('mainScreen') }}>
   
           <IconLogOut name ={'logout'}  style={styles.sideMenuIcon} />    
@@ -62,7 +64,7 @@ export default class ContentDrawer extends Component {
  
         </View>
  
-        <View style={{ width: '100%', height: 1, backgroundColor: '#e2e2e2'}} />
+      
  
  
       </ImageBackground>
@@ -106,8 +108,9 @@ export default class ContentDrawer extends Component {
     },
 
     logOutBox:{
-      marginTop: hp('40%'),
-      left: wp('27%')
+      marginTop: hp('38%'),
+      left: wp('35%')
+      
     }
    
   });
