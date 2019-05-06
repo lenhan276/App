@@ -6,13 +6,13 @@ export default {
     settingScreen:{
         screen: Setting,
         navigationOptions : {
-           
+            headerTintColor: '#fff',
         }
     },
     dataScreen:{
         screen: Data,
         navigationOptions : {
-        
+            headerTintColor: '#fff',
         }
     }
 }

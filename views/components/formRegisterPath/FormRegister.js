@@ -117,25 +117,23 @@ export default class FormRegister extends Component {
             </TouchableOpacity>
 
             <Modal  isVisible={this.state.isModalVisible1}  
-                    onSwipeComplete={this._toggleModal1}
-                    onBackdropPress={this._toggleModal1}
-                    swipeDirection="down" 
+                    animationIn="slideInLeft"
+                    animationOut="slideOutRight"
                     backdropColor = "transparent"
-                    animationInTiming={2000}
-                    animationOutTiming={0}
-                    backdropTransitionOutTiming={0}>                  
-              <View style ={styles.modalStyle}>              
-                {/* <IconMaterial name={'close'} size={27} color={'white'} style={styles.closeButton} 
-                  />  */}
+                    animationInTiming={1000}
+                    onSwipeComplete={this._toggleModal1}
+                    swipeDirection="right">                  
+              <TouchableOpacity style ={styles.modalStyle}
+                activeOpacity = {0.5}
+                onPress={() => {
+                this._toggleModal1()}}>              
+      
                 <Text adjustsFontSizeToFit={true} 
-                      // numberOfLines={2}
                       style ={styles.modalText}
-                      onPress={() => {
-                        this._toggleModal1()}}
                 > 
                       {this.state.registerText} 
                 </Text>
-              </View>
+                </TouchableOpacity>
             </Modal>
 
             <Modal
@@ -229,7 +227,6 @@ const styles = StyleSheet.create({
       width: wp('90%'),
       height: hp('13%'),
       // paddingHorizontal: 15,
-    
     },  
     modalStyle2:{
       paddingVertical: wp('5%'),

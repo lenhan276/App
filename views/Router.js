@@ -48,11 +48,22 @@ const HomeProfileTab = createMaterialBottomTabNavigator({
     },
 );
 
+const TabStack = createStackNavigator({
+    Tab: {
+        screen: HomeProfileTab
+    },
+},
+    {
+        headerMode: 'none',
+    initialRouteName: 'Tab'
+    }
+);
+
 const SideMenuDraw = createDrawerNavigator({
     homeSideMenu :{
-         screen: HomeProfileTab,
+         screen: TabStack,
          navigationOptions : {
-            
+            headerTintColor: '#fff',
          }
      },
      ...MappingDrawer,
@@ -68,23 +79,11 @@ const LoginStack = createStackNavigator({
     loginHome: { 
         screen: SideMenuDraw
     },
-},
-    
+},  
       { 
         headerMode: 'none',
         initialRouteName: 'loginHome',
     },
-);
-
-const RegisterStack = createStackNavigator({
-    sideRegister1: {
-        screen: SideRegister1
-    },
-},
-    {
-    headerMode: 'none',
-    initialRouteName: 'sideRegister1'
-    }
 );
 
 const mainStack = createSwitchNavigator({
@@ -93,9 +92,6 @@ const mainStack = createSwitchNavigator({
     },
     loginScreen: {
         screen: LoginStack
-    },
-    registerScreen: {
-        screen: RegisterStack
     },
     logAfterScreen: {
         screen: LogAfterReg

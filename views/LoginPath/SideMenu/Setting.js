@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { StyleSheet, View, Text, Button, ImageBackground } from 'react-native'
 import background from './Images/blue_background.png'
 import { Container, Header, Content, Left } from 'native-base'
-import IconMenu from 'react-native-vector-icons/Entypo';
+import IconMenu from 'react-native-vector-icons/MaterialCommunityIcons';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 export default class SideLogin1 extends Component {
@@ -11,10 +11,11 @@ export default class SideLogin1 extends Component {
     return (
       <Container>
         <ImageBackground source = {background} style = {styles.backgroundContainer}>
-          <Header style={{ backgroundColor: "transparent" }}
+          <Header 
                   iosBarStyle={"light-content"}
                   androidStatusBarColor="rgba(0,0,0,0.251)"
                   transparent
+                  shadowOpacity = {0} // remove shadow on iOS
                   noShadow>
                 <Left>
                   <IconMenu name = {'menu'} size ={28} style = {{right: wp('27%'), color:'white',marginBottom: hp('4%')}} onPress={() => 
