@@ -6,19 +6,37 @@ import background from './views/components/images/blue_background.png'
 import MyApp from './views/Router'
 import Logo from './views/components/Logo'
 import StatusBarColor from './views/components/StatusBar/StatusBarColor'
+import axios from 'axios'
+
 
 export default class App extends Component {
-  render() {
-    return (
 
-        <PaperProvider >
-          <StatusBarColor backgroundColor="#772ea2"
-             barStyle="light-content"/>
+  // constructor (props) {
+  //   super(props)
+  //   this.state ={
+  //     data: Data,
+  //   }
+  // }
+  render() {
+    axios.get('http://61.14.237.248:3001/users/duong@gmail.com/gateways')
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+    return (
+    
+        
+          <PaperProvider >
+            {/* <StatusBarColor 
+             backgroundColor="black"
+             barStyle="light-content"/> */}
             <MyApp ref={navigatorRef => {
                 NavigationService.setTopLevelNavigator(navigatorRef);
               }} />
-
-        </PaperProvider>
+          </PaperProvider>
+ 
     );
   }
 }

@@ -1,6 +1,8 @@
-import { StyleSheet, Platform, StatusBar } from 'react-native';
+import { StyleSheet, Platform, NativeModules } from 'react-native';
 
-const STATUSBAR_HEIGHT = Platform.OS === 'ios' ? 20 : StatusBar.currentHeight;
+const { StatusBarManager } = NativeModules;
+
+const STATUSBAR_HEIGHT = Platform.OS === 'ios' ? 20 : StatusBarManager.HEIGHT;
 
 export default StyleSheet.create({
 statusBar: {

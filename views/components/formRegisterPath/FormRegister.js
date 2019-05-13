@@ -186,7 +186,9 @@ const styles = StyleSheet.create({
       borderRadius: 25,
       fontSize: hp('2%'),
       paddingLeft: wp('13%'),
-      backgroundColor: 'rgba(0, 0, 0, 0.35)',
+      borderColor: 'white',
+      borderWidth: 1,
+      backgroundColor: 'transparent',
       color: 'rgba(255, 255, 255, 0.7)',
       marginHorizontal: wp('6%'),
     },
@@ -198,15 +200,17 @@ const styles = StyleSheet.create({
     btnLogin: {
       height: hp('7%'),
       borderRadius: 25,
-      backgroundColor: 'rgba(69, 8, 135, 1)',
+      borderColor: 'white',
+      borderWidth: 1,
+      backgroundColor: 'transparent',
       justifyContent: 'center',
       marginTop: hp('3%'),
       paddingHorizontal: wp('32%'),
-      shadowColor: 'rgba(0,0,0, .4)', // IOS
-      shadowOffset: { height: 1, width: 1 }, // IOS
-      shadowOpacity: 1, // IOS
-      shadowRadius: 1, //IOS
-      elevation: 2, // Android
+      // shadowColor: 'rgba(0,0,0, .4)', // IOS
+      // shadowOffset: { height: 1, width: 1 }, // IOS
+      // shadowOpacity: 1, // IOS
+      // shadowRadius: 1, //IOS
+      // elevation: 2, // Android
       // marginBottom: 50,
     },
     textBtnLogin: {

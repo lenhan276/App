@@ -14,54 +14,73 @@ import IconFontAw from 'react-native-vector-icons/FontAwesome'
 import IconFoundation from 'react-native-vector-icons/Foundation'
 
 
+ 
+//  const TabStack = createStackNavigator({
+//     Tab: {
+//         screen: SideMenuDraw
+//     },
+// },
+//     {
+//     headerMode: 'none',   
+//     initialRouteName: 'Tab'
+//     }
+// );
 
+// const HomeProfileTab = createMaterialBottomTabNavigator({
+//     homeTabScreen: {
+//         screen: TabStack,
+//         navigationOptions: {
+//             tabBarLabel: 'Home',
+//             tabBarIcon: ({tintColor}) => (
+//                <IconFontAw name="home" size={26} color={tintColor} />
+//                )
+//         }
+//     },
+//     optionScreen: {
+//         screen: Option,
+//         navigationOptions: {
+//             tabBarLabel: 'Options',
+//             tabBarIcon: ({tintColor}) => (
+//                <IconFoundation name="page-multiple" size={26} color={tintColor} />
+//                )
+//         }
+//     },
+// },
+//     { 
+//        initialRouteName: 'homeTabScreen', 
+//        order: ['homeTabScreen','optionScreen'],
+//        activeTintColor: 'black',
+//        barStyle: { backgroundColor: '#F0F8FF', borderTopWidth:0.5, borderTopColor: '#fb9800', opacity: 100 },
+//        labelStyle: { fontSize: 10 },
+//        showIcon: true,
+//        showLabel: true,
+//        shifting: true,
+//        backBehavior: 'none'
+//     },
+// );
 
-const HomeProfileTab = createMaterialBottomTabNavigator({
-    homeTabScreen: {
-        screen: Home,
-        navigationOptions: {
-            tabBarLabel: 'Home',
-            tabBarIcon: ({tintColor}) => (
-               <IconFontAw name="home" size={26} color={tintColor} />
-               )
-        }
-    },
-    optionScreen: {
-        screen: Option,
-        navigationOptions: {
-            tabBarLabel: 'Options',
-            tabBarIcon: ({tintColor}) => (
-               <IconFoundation name="page-multiple" size={26} color={tintColor} />
-               )
-        }
-    },
-},
-    { 
-       initialRouteName: 'homeTabScreen', 
-       order: ['homeTabScreen','optionScreen'],
-       activeTintColor: 'black',
-       barStyle: { backgroundColor: '#F0F8FF', borderTopWidth:0.5, borderTopColor: '#fb9800', opacity: 100 },
-       labelStyle: { fontSize: 10 },
-       showIcon: true,
-       showLabel: true,
-       shifting: true,
-    },
-);
-
-const TabStack = createStackNavigator({
-    Tab: {
-        screen: HomeProfileTab
-    },
-},
-    {
-        headerMode: 'none',
-    initialRouteName: 'Tab'
-    }
-);
-
+// const HomeProfileTab = createBottomTabNavigator({
+//     homeTabScreen: {
+//         screen: Home,
+//         navigationOptions: {
+//             tabBarLabel: 'Home',
+//             tabBarIcon: ({tintColor}) => (
+//                <IconFontAw name="home" size={26} color={tintColor} />
+//                )
+//         }
+//     },
+//     optionScreen: {
+//         screen: Option,
+//         navigationOptions: {
+//             tabBarLabel: 'Options',
+//             tabBarIcon: ({tintColor}) => (
+//                <IconFoundation name="page-multiple" size={26} color={tintColor} />
+//                )
+//         }}
+// )
 const SideMenuDraw = createDrawerNavigator({
     homeSideMenu :{
-         screen: TabStack,
+         screen: Home,
          navigationOptions : {
             headerTintColor: '#fff',
          }
@@ -74,7 +93,7 @@ const SideMenuDraw = createDrawerNavigator({
          drawerWidth: Dimensions.get('window').width - 100,
  },
  );
- 
+
 const LoginStack = createStackNavigator({
     loginHome: { 
         screen: SideMenuDraw
