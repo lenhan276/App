@@ -1,13 +1,26 @@
 import React, { Component } from 'react'
-import { StyleSheet, View, Text, Button, ImageBackground } from 'react-native'
+import { StyleSheet, View, Text, Button, ImageBackground, TouchableOpacity } from 'react-native'
 import background from './Images/blue_background.png'
 import { Container, Header, Content, Left, Icon, Body, Right, Title   } from 'native-base'
 import IconMenu from 'react-native-vector-icons/MaterialCommunityIcons';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+import FormConfig from '../../components/formLoginPath/FormConfig'
 
 export default class SideLogin1 extends Component {
+
+  // constructor(props) {
+  //   super(props)
+  //   this.state = {
+  //     isVisible: false,
+  //     index: 0,
+  //     color: 'white',
+  //     size: 100,
+  //     types: ['FadingCircleAlt']
+  //   }
+  // }
+  
+
   render() {
-      
     return (
       <Container>
         <ImageBackground source = {background} style = {styles.backgroundContainer} >
@@ -20,21 +33,19 @@ export default class SideLogin1 extends Component {
                 <Left style={{
                       flex:1
                       }}>                 
-                      <Icon name = {'menu'} size ={30} style ={{color : 'white', left: hp('1%')}} onPress={() => 
+                      <IconMenu name = {'menu'} size ={hp('4.3%')} style ={{color : 'white', left: hp('1%')}} onPress={() => 
                       this.props.navigation.openDrawer()} />
                 </Left>
                   <Body style ={{flex: 1,justifyContent:'center'}}>
-                    <Title >
-                      DATA
+                    <Title style = {styles.title}>
+                      CONFIG
                     </Title> 
                   </Body>
+                <Right style ={{flex:1}}></Right>
             
           </Header>
-          <View style={{ width: '100%', height: 1, backgroundColor: '#e2e2e2',}} />
-            <View style={styles.container}>
-                <Text style = {{color: 'white', fontSize: 20}}>
-                  Data
-                </Text> 
+            <View style={styles.container}>            
+                <FormConfig/>                           
             </View>
         </ImageBackground>
       </Container>
@@ -55,4 +66,9 @@ const styles = StyleSheet.create({
       // justifyContent: 'center',
       // alignItems: 'center',
     },
+    title: {
+      color: 'white',
+      fontSize: hp('2.8%'),
+      
+    }
 })

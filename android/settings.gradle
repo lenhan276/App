@@ -1,4 +1,8 @@
 rootProject.name = 'App'
+include ':react-native-linear-gradient'
+project(':react-native-linear-gradient').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-linear-gradient/android')
+include ':react-native-spinkit'
+project(':react-native-spinkit').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-spinkit/android')
 include ':react-native-smartconfig-ll'
 project(':react-native-smartconfig-ll').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-smartconfig-ll/android')
 include ':react-native-vector-icons'

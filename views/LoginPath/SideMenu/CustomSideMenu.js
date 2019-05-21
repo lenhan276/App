@@ -35,7 +35,7 @@ export default class ContentDrawer extends Component {
               <IconMenu name ={'settings-outline'}  style={styles.sideMenuIcon} />
               
               <Text style={styles.menuText} 
-              > Data </Text>
+              > Smart Config </Text>
  
         </TouchableOpacity>
  

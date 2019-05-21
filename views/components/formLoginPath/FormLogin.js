@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
     input: {
       width: WIDTH - wp('13.5%'),
       height: hp('6.5%'),
-      borderRadius: 25,
+      borderRadius: hp('2%'),
       fontSize: hp('2%'),
       paddingLeft: wp('13%'),
       borderColor: 'white',
@@ -100,10 +100,10 @@ const styles = StyleSheet.create({
     },
     btnLogin: {
       height: hp('7%'),
-      borderRadius: 25,
       borderColor: 'white',
       borderWidth: 1,
-      backgroundColor: 'transparent',
+      borderRadius: hp('2%'),
+      backgroundColor: 'rgba(52, 52, 52, 0.4)',
       justifyContent: 'center',
       marginTop: hp('3%'),
       paddingHorizontal: wp('36%'),

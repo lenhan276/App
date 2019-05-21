@@ -19,14 +19,15 @@ export default class SideLogin1 extends Component {
                   <Left style={{
                       flex:1
                       }}>                 
-                      <Icon name = {'menu'} size ={30} style ={{color : 'white', left: hp('1%')}} onPress={() => 
+                      <IconMenu name = {'menu'} size ={hp('4.3%')} style ={{color : 'white', left: hp('1%')}} onPress={() => 
                       this.props.navigation.openDrawer()} />
                   </Left>
-                  <Body style ={{flex: 1,justifyContent:'center'}}>
-                  <Title >
+                  <Body style ={{flex: 1}}>
+                  <Title style = {styles.title}>
                    SETTING
-                   </Title> 
+                   </Title>
                   </Body>
+                  <Right style ={{flex:1}}></Right>
           </Header>
               <View style={{ width: '100%', height: 1, backgroundColor: '#e2e2e2',}} />
             <View style={styles.container}>
@@ -53,4 +54,9 @@ const styles = StyleSheet.create({
       // justifyContent: 'center',
       // alignItems: 'center',
     },
+    title: {
+      color: 'white',
+      fontSize: hp('2.8%'),
+      
+    }
 })

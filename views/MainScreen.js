@@ -75,15 +75,15 @@ const styles = StyleSheet.create({
       },
       registTextCont: {
         justifyContent: 'flex-end',
-        marginBottom: hp('5%'),
+        marginBottom: hp('7%'),
       },
       RegistText: {
         color: 'rgba(69, 8, 135, 0.5)',
-        fontSize: 16
+        fontSize: hp('2.4%'),
       },
       registBtn: {
         color: 'black',
-        fontSize: 16,
+        fontSize: hp('2.4%'),
         fontWeight: '500'
       }
     });

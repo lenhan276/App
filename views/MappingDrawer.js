@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Setting from './LoginPath/SideMenu/Setting'
-import Data from './LoginPath/SideMenu/Data'
+import Config from './LoginPath/SideMenu/Config'
 
 export default {
     settingScreen:{
@@ -10,7 +10,7 @@ export default {
         }
     },
     dataScreen:{
-        screen: Data,
+        screen: Config,
         navigationOptions : {
             headerTintColor: '#fff',
         }
